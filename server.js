@@ -53,6 +53,13 @@ app.get('/about',(request,response)=>{
   });
 });
 
+app.get('/projects',(request,response)=>{
+  response.render('projects.hbs',{
+    pageTitle:'Portfolio',
+    welcomeMessage:'Here is our portfolio.'
+  });
+});
+
 app.get('/bad',(request,response)=>{
   response.send({
     errorMessage:'Sorry, could not process the request.'
